@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"os"
+	"strconv"
 
 	"github.com/ltbatista/prime-number-decomposition/prime/primepb"
 	"google.golang.org/grpc"
@@ -26,25 +28,26 @@ func main() {
 
 func doPrimeDecompositionRequest(c primepb.PrimeServiceClient) {
 	//TODO: Implementar
+	number, _ := strconv.Atoi(os.Args[1])
 	fmt.Println("Starting Prime Request RPC...")
 	req := &primepb.PrimeRequest{
 		Prime: &primepb.Prime{
-			Numero: 120,
+			Numero: int32(number),
 		},
 	}
 	resStream, err := c.Prime(context.Background(), req)
 	if err != nil {
-		log.Fatalf("Error while calling GreetManyTimes RPC: %v", err)
+		log.Fatalf("Error while calling Prime RPC: %v", err)
 	}
 	for {
 		msg, err := resStream.Recv()
 		if err == io.EOF {
-			// chegamos ao fim do streaming
+			log.Print("End.")
 			break
 		}
 		if err != nil {
 			log.Fatalf("error while reading stream: %v", err)
 		}
-		log.Printf("Response from GreetManyTimes: %v", msg.GetResult())
+		log.Printf("Response from Prime Decomposition: %v", msg.GetResult())
 	}
 }
