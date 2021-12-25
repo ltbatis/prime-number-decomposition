@@ -16,6 +16,8 @@ type server struct{}
 func (*server) Prime(req *primepb.PrimeRequest, stream primepb.PrimeService_PrimeServer) error {
 	fmt.Println("Initializing prime decomposition...")
 	inteiro := req.GetPrime().GetNumero()
+	// TODO: Implementar a decomposição dos números primos, por enquanto só está fazendo um contador
+	// para testar se o server está funcionando
 	for i := 1; i < int(inteiro); i++ {
 		result := strconv.Itoa(i)
 		res := &primepb.PrimeResponse{
