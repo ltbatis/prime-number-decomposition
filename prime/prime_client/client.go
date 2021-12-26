@@ -27,7 +27,6 @@ func main() {
 }
 
 func doPrimeDecompositionRequest(c primepb.PrimeServiceClient) {
-	//TODO: Implementar
 	number, _ := strconv.Atoi(os.Args[1])
 	fmt.Println("Starting Prime Request RPC...")
 	req := &primepb.PrimeRequest{
