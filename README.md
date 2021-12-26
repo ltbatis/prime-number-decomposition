@@ -26,15 +26,15 @@ go run prime/prime_client/client.go 720
 ```
 
 The code above will return the following responses:
->Hello, i'm a client
-Starting Prime Request RPC...
-2021/12/25 21:02:47 Response from Prime Decomposition: 2
-2021/12/25 21:02:48 Response from Prime Decomposition: 2
-2021/12/25 21:02:49 Response from Prime Decomposition: 2
-2021/12/25 21:02:50 Response from Prime Decomposition: 2
-2021/12/25 21:02:51 Response from Prime Decomposition: 3
-2021/12/25 21:02:52 Response from Prime Decomposition: 3
-2021/12/25 21:02:53 Response from Prime Decomposition: 5
+>Hello, i'm a client <br>
+Starting Prime Request RPC...<br>
+2021/12/25 21:02:47 Response from Prime Decomposition: 2<br>
+2021/12/25 21:02:48 Response from Prime Decomposition: 2<br>
+2021/12/25 21:02:49 Response from Prime Decomposition: 2<br>
+2021/12/25 21:02:50 Response from Prime Decomposition: 2<br>
+2021/12/25 21:02:51 Response from Prime Decomposition: 3<br>
+2021/12/25 21:02:52 Response from Prime Decomposition: 3<br>
+2021/12/25 21:02:53 Response from Prime Decomposition: 5<br>
 2021/12/25 21:02:54 End.
 #
 
