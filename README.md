@@ -36,6 +36,7 @@ Starting Prime Request RPC...<br>
 2021/12/25 21:02:52 Response from Prime Decomposition: 3<br>
 2021/12/25 21:02:53 Response from Prime Decomposition: 5<br>
 2021/12/25 21:02:54 End.
+Because (2 * 2 * 2 * 2 * 3 * 3 * 5) is 720.
 #
 
 ### Requirements
